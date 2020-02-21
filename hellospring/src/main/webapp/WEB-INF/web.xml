@@ -11,7 +11,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
+		<servlet-name>spring</servlet-name> <!-- ex) mysite02-servlet이면 mysite로 바꿔줘야한다 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
