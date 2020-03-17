@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%pageContext.setAttribute("newLine", "\n");%>
 
 
 <html>
@@ -25,10 +26,9 @@
 		</tr>
 	</table>
 	</form>
-	<br>
-	
 	<c:set var='listCount' value='${fn:length(list)}'/>
 	<c:forEach items="${list}" var="vo" varStatus='status'>
+	<br>
 	<table width=510 border=1>
 		<tr>
 			<td>${listCount-status.index}</td>
@@ -37,7 +37,7 @@
 			<td><a href="${pageContext.request.contextPath}/delete/${vo.no}">삭제</a></td>
 		</tr>	
 		<tr>
-			<td colspan=4>${vo.contents}</td>
+			<td colspan=4>${fn:replace(vo.contents, newLine, "<br>") }</td>
 		</tr>
 	</table>
 </c:forEach>

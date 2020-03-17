@@ -10,16 +10,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.douzone.guestbook.vo.GuestbookVo;
+import com.douzone.guestbook.vo.GuestBookVo;
 
 //com.douzone.emaillist. 이까지 스캐닝되고
 //밑에 @달아서 스캐닝
 
 @Repository
-public class GuestbookRepository {
+public class GuestBookRepository {
 	
-	public List<GuestbookVo> findAll(){
-		List<GuestbookVo> result = new ArrayList<GuestbookVo>();
+	public List<GuestBookVo> findAll(){
+		List<GuestBookVo> result = new ArrayList<GuestBookVo>();
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -42,7 +42,7 @@ public class GuestbookRepository {
 				String password = rs.getString(4);
 				String regDate = rs.getString(5);
 				
-				GuestbookVo vo = new GuestbookVo();
+				GuestBookVo vo = new GuestBookVo();
 				
 				vo.setNo(no);
 				vo.setName(name);
@@ -77,7 +77,7 @@ public class GuestbookRepository {
 	
 	
 	
-	public Boolean insert(GuestbookVo vo) {
+	public Boolean insert(GuestBookVo vo) {
 		Boolean result = false;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
