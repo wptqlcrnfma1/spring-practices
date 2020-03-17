@@ -35,14 +35,16 @@
 				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n
 			</Pattern>
 		</encoder>
+		 <!-- 50kb 넘으면 압축 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<FileNamePattern>/logex/logex3.%i.log.zip</FileNamePattern>
 			<MinIndex>1</MinIndex>
-			<MaxIndex>10</MaxIndex>
+			<MaxIndex>10</MaxIndex> 
+			<!-- 1~10개 파일까지만 -->
 		</rollingPolicy>
 		<triggeringPolicy
 			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-			<MaxFileSize>1MB</MaxFileSize>
+			<MaxFileSize>10KB</MaxFileSize>
 		</triggeringPolicy>
 	</appender>	
 
@@ -50,7 +52,7 @@
 	<!--
 		com.douzone.logex2 아래 패키지 로그들만  \logex\logex2.log 파일에만  출력하는 로거
 	-->
-	<logger name="com.douzone.logex2"  level="debug" additivity="false">
+	<logger name="com.douzone.logex2"  level="warn" additivity="false">
             <appender-ref ref="fileAppender2" />
     </logger>
     
@@ -63,7 +65,7 @@
     </logger>    
 	
 	<!-- 루트(글로벌) 로거 -->
-	<root level="warn">
+	<root level="debug">
 		<appender-ref ref="consoleAppender" />
 	</root>
 

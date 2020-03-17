@@ -32,8 +32,11 @@ public class ExampleController {
 		 *     직접 테스트 해 보세요.
 		 *  
 		 */
+		
+		//logback.xml에 level이 warn 이기 때문에 출력되지 않는다.
 		LOG.debug( "#ex1 - debug log" );
 		LOG.info( "#ex1 - info log" );
+		
 		LOG.warn( "#ex1 - warn log" );
 		LOG.error( "#ex1 - error log" );
 		
