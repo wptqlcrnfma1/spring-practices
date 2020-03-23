@@ -25,20 +25,38 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 		
-		<!-- Test JUnit -->
+		<!-- 자바표준(JR330) scanning 관련 annotation -->
+		<!-- spring context(core) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId> <!-- junit이 test에서 작업중이면.. -->
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- 자바 표준(JR330) scanning, wiring annotation -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<!-- Test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
 		<dependency>
-  			  <groupId>junit</groupId>
-  			  <artifactId>junit</artifactId>
-   			 <version>4.12</version>
-  			  <scope>test</scope>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
 		</dependency>
-		
-		
+		<dependency>
+		  <groupId>com.github.stefanbirkner</groupId>
+		  <artifactId>system-rules</artifactId>
+		  <version>1.19.0</version>
+		</dependency>		
 		
 	</dependencies>
 	
