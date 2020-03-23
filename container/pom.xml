@@ -24,6 +24,22 @@
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
+		<!-- Test JUnit -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId> <!-- junit이 test에서 작업중이면.. -->
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+  			  <groupId>junit</groupId>
+  			  <artifactId>junit</artifactId>
+   			 <version>4.12</version>
+  			  <scope>test</scope>
+		</dependency>
+		
+		
+		
 	</dependencies>
 	
 	

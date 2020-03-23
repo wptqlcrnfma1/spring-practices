@@ -10,8 +10,8 @@ public class AppConfig02 {
 	
 	@Bean
 	public User user() {
-		System.out.println("@Configuration Called");
-		return new User();
+		System.out.println("@Configuration AppConfig02 Called");
+		return new User("마이콜");
 		
 	}
 }
