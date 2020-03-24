@@ -9,7 +9,11 @@ public class DVDPlayer {
 		
 	}
 	
-	
+	//setter를 사용해서 만들 준비 > DVDPlayerConfig 3번 주입 참고
+	public void setDvd(DigitalVideoDisc dvd) {
+		this.dvd = dvd;
+	}
+
 	//dvdplayerconfig가서 dvdplayer() 만들고 테스트하고 여기와서 생성자 넣는 순서가 맞다.
 	public DVDPlayer(DigitalVideoDisc dvd) {
 		this.dvd=dvd;
