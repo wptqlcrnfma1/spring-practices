@@ -2,21 +2,21 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>com.douzone</groupId>
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-		
+
 	<artifactId>hellospring06</artifactId>
 	<packaging>jar</packaging>
-		
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -28,39 +28,39 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-		
+
 	<dependencies>
 		<!-- spring boot starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		
+
 		<!-- spring boot devtools: live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		
-		
+
+
 		<!-- spring boot web starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- jstl -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-		
+
 		<!-- tomcat jasper -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-		
+
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -72,9 +72,9 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>		
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>hellospring06</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
@@ -103,5 +103,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>		
+	</build>
 </project>
