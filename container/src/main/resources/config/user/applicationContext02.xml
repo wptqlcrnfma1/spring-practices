@@ -14,11 +14,7 @@
 
 	<!-- bean설정 명시적으로 class 설정 -->
 	<bean id = "user1" class="com.douzone.container.user.User1"/>
-	
-	
-	
-	
-	
+
 	<!-- 기본 생성자로 빈 생성 -->
 	<bean id = "user" name = "usr" class="com.douzone.container.user.User"/>
 	
