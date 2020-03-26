@@ -21,6 +21,5 @@
 		<module>hellospring04</module>
 		<module>hellospring05</module>
 		<module>hellospring06</module>
-		<module>hellospirng06-test</module>
 	</modules>
 </project>
